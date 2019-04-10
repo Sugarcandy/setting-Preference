@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Setting</string>
+    <string name="In_line">In-line preferences </string>
+    <string name="Dialog_based">Launch preferences </string>
+    <string name="Launch">Launch preferences </string>
+    <string name="attributes">Preference attributes </string>
+    <string name="CheckBoxPreference">CheckBoxPreference</string>
+    <string name="EditTextPreference">EditTextPreference</string>
+    <string name="ListPreference">ListPreference</string>
+    <string name="PreferenceScreen">PreferenceScreen</string>
+    <string name="Parent">Parent CheckBox</string>
+    <string name="Child">Child CheckBox</string>
+</resources>

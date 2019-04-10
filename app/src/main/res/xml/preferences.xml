@@ -1,0 +1,72 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/In_line"
+        android:key="@string/In_line">
+        <CheckBoxPreference
+            android:title="@string/CheckBoxPreference"
+            android:key="@string/CheckBoxPreference"
+            android:summary="this is a checkbox..."
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/Dialog_based"
+        android:key="@string/Dialog_based">
+        <EditTextPreference
+            android:title="@string/EditTextPreference"
+            android:key="@string/EditTextPreference"
+            android:summary="Edit your name..."
+            android:textSize="20dp"
+            android:dialogLayout="@layout/dialog"
+            android:dialogTitle="Edit your name"
+            />
+        <ListPreference
+            android:title="@string/ListPreference"
+            android:key="@string/ListPreference"
+            android:summary="select what you want..."
+            android:dialogTitle="Select you likes"
+            android:entries="@array/entries_muti_select_list_preference"
+            android:entryValues="@array/entries_muti_select_list_preference"
+            android:defaultValue="青菜"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/Launch"
+        android:key="@string/Launch">
+        <PreferenceScreen android:title="New PreferenceScreen"
+            android:key="New PreferenceScreen"
+            android:summary="go to a website...">
+            <CheckBoxPreference android:title="New CheckBoxPreference"
+            android:key="new_CheckBoxPreference"
+            android:summary="this is a new checkbox..."
+            android:defaultValue="false"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="Net"
+            android:key="net"
+            android:summary="go to a website...">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.baidu.com"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/CheckBoxPreference"
+        android:key="@string/CheckBoxPreference"
+        android:summary="this is ParenCheckbox and Children...">
+        <CheckBoxPreference
+            android:title="@string/Parent"
+            android:key="@string/Parent"
+            android:summary="this is parent..."
+            />
+        <CheckBoxPreference
+            android:title="@string/Child"
+            android:key="@string/Child"
+            android:dependency="@string/Parent"
+            android:summary="this is child..."
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>
